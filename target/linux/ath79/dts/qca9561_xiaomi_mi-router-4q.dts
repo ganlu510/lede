@@ -17,13 +17,8 @@
 		led-upgrade = &led_red;
 	};
 
-	chosen {
-		bootargs = "console=ttyS0,115200n8";
-	};
-
 	keys {
-		compatible = "gpio-keys-polled";
-		poll-interval = <100>;
+		compatible = "gpio-keys";
 
 		reset {
 			label = "Reset button";
@@ -59,10 +54,6 @@
 };
 
 &uart {
-	status = "okay";
-};
-
-&gpio {
 	status = "okay";
 };
 
